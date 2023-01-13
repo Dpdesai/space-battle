@@ -3,7 +3,7 @@ export default class AlienShip {
         this.hull = Math.floor(Math.random() * 4) + 3;
         this.firepower = Math.floor(Math.random() * 3) + 2;
         this.accuracy = (Math.floor(Math.random() * 3) + 6) / 10;
-        this.image = undefined;
+        this.id = undefined;
     }
     attack(target) {
         if (Math.random() < this.accuracy) {

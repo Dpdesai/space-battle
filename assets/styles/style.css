@@ -9,6 +9,12 @@ body {
     overflow: hidden;
 }
 
+audio {
+    height: 0;
+    width: 0;
+    display: inherit;
+}
+
 .main {
     height: 100%;
 }
@@ -18,24 +24,53 @@ body {
     text-align: center;
 }
 
-.uss img{
-    max-height: 280px;
+.uss {
+    position: relative;
+    height: 200px;
 }
+
+.uss img{
+    /* position: absolute; */
+    max-height: 180px;
+    /* animation: linear infinite;
+    animation-name: run;
+    animation-duration: 5s; */
+}
+
+@keyframes run {
+    0% {
+      left: 0;
+    }
+    50% {
+      left: calc(100% - 240px);
+    }
+    100% {
+      left: 0;    
+    }
+}
+
 .alien-wrap {
     display: flex;
-    justify-content: space-between;
-    height: 250px;
+    /* justify-content: space-between; */
+    justify-content: center;
+    height: 330px;
     align-items: flex-start;
+    gap: 16px;
 }
+
 .alien-wrap img{
     width: 15%;
 }
 
-.alien-wrap #img1,.alien-wrap #img4 {
+.alien-wrap .alienship-img {
+    padding-top: 24%;
+}
+
+.alien-wrap .alienship-img:first-child,.alien-wrap .alienship-img:last-child {
     padding-top: 8%;
 }
 
-.alien-wrap #img2,.alien-wrap #img3 {
+.alien-wrap .alienship-img:nth-child(2),.alien-wrap .alienship-img:nth-last-child(2) {
     padding-top: 16%;
 }
 
